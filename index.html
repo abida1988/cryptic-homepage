@@ -3,48 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cryptic | Crypto Portfolio</title>
+  <title>Cryptic | Secure Blockchain Solutions</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="container">
       <div class="logo">Cryptic</div>
       <nav class="nav">
         <a href="#">Home</a>
-        <a href="#features">Features</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#pricing">Pricing</a>
-        <button class="wallet-button">Connect Wallet</button>
+        <a href="#">Features</a>
+        <a href="#">Solutions</a>
+        <a href="#">Pricing</a>
       </nav>
+      <a class="btn-primary" href="#">Connect Wallet</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <div class="text">
-        <h1>Revolutionize Your Transactions With <span class="highlight">Secure Blockchain Solutions</span></h1>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Revolutionize Your Transactions With <span>Secure</span> Blockchain Solutions</h1>
         <p>Manage simple crypto insights, get deep market data and performance analytics, all in real time.</p>
-        <div class="hero-buttons">
-          <button class="demo-button">Demo</button>
-          <button class="get-started-button">Get Started</button>
+        <div class="buttons">
+          <a href="#" class="btn-primary">Get Started</a>
+          <a href="#" class="btn-secondary">Demo</a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="images/hero.png" alt="Crypto Dashboard" />
+      <div class="hero-img">
+        <img src="images/hero.png" alt="Dashboard mockup">
       </div>
     </div>
   </section>
 
-  <!-- Trusted Companies -->
-  <section class="trusted">
+  <section class="partners">
     <div class="container">
       <p>Trusted by crypto leaders and blockchain giants</p>
-      <div class="brands">
+      <div class="logos">
         <span>Boltshift</span>
         <span>Lightbox</span>
         <span>FeatherDev</span>
@@ -55,28 +51,23 @@
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
+  <section class="features">
     <div class="container">
       <h2>Innovative Features of Cryptic</h2>
       <div class="feature-grid">
-        <!-- Dynamic Market Trends -->
-        <div class="feature-card">
+        <div class="feature">
           <h3>Dynamic Market Trends</h3>
-          <canvas id="marketChart"></canvas>
+          <p>Visualize the latest crypto market analytics with elegant, real-time charts.</p>
         </div>
-        <!-- Fortified Security -->
-        <div class="feature-card">
+        <div class="feature">
           <h3>Fortified Security</h3>
           <p>Advanced AI and multi-layer authentication ensure unbeatable protection.</p>
         </div>
-        <!-- Decentralized Connectivity -->
-        <div class="feature-card">
+        <div class="feature">
           <h3>Decentralized Connectivity</h3>
           <p>Peer-to-peer networks, low latency, and ultra-fast operations.</p>
         </div>
-        <!-- Payment Gateway -->
-        <div class="feature-card">
+        <div class="feature">
           <h3>Payment Gateway</h3>
           <p>Accept and send crypto transactions instantly with VISA integration.</p>
         </div>
@@ -84,72 +75,43 @@
     </div>
   </section>
 
-  <!-- Pricing Section -->
-  <section id="pricing" class="pricing">
+  <section class="pricing">
     <div class="container">
       <h2>Pricing Made Simple</h2>
       <div class="pricing-cards">
         <div class="card">
           <h3>Basic Plan</h3>
-          <p class="price">$10 <span>/month</span></p>
+          <p class="price">$10<span>/month</span></p>
           <ul>
             <li>Unlimited tracking</li>
             <li>Basic insights</li>
             <li>Email support</li>
           </ul>
-          <button class="cta">Get Started</button>
+          <a class="btn-primary" href="#">Get Started</a>
         </div>
-        <div class="card">
+        <div class="card premium">
           <h3>Pro Plan</h3>
-          <p class="price">$25 <span>/month</span></p>
+          <p class="price">$25<span>/month</span></p>
           <ul>
             <li>Advanced analytics</li>
             <li>Live data</li>
             <li>Premium support</li>
           </ul>
-          <button class="cta">Get Started</button>
+          <a class="btn-primary" href="#">Get Started</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="left">
-          <h3>Cryptic</h3>
-          <p>Secure blockchain solutions made simple.</p>
-        </div>
-        <div class="right">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Support</a>
-        </div>
+      <p>© 2025 Cryptic. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
       </div>
-      <p class="copyright">© 2025 Cryptic. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    const ctx = document.getElementById('marketChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-        datasets: [{
-          label: 'Growth',
-          data: [12, 19, 3, 5, 2],
-          borderColor: '#facc15',
-          tension: 0.3
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: { x: { display: false }, y: { display: false } }
-      }
-    });
-  </script>
 </body>
 </html>
