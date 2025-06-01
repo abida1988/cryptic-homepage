@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryptic | Crypto Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">Cryptic</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#pricing">Pricing</a>
+        <button class="wallet-button">Connect Wallet</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="text">
+        <h1>Revolutionize Your Transactions With <span class="highlight">Secure Blockchain Solutions</span></h1>
+        <p>Manage simple crypto insights, get deep market data and performance analytics, all in real time.</p>
+        <div class="hero-buttons">
+          <button class="demo-button">Demo</button>
+          <button class="get-started-button">Get Started</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero.png" alt="Crypto Dashboard" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted Companies -->
+  <section class="trusted">
+    <div class="container">
+      <p>Trusted by crypto leaders and blockchain giants</p>
+      <div class="brands">
+        <span>Boltshift</span>
+        <span>Lightbox</span>
+        <span>FeatherDev</span>
+        <span>Spherule</span>
+        <span>GlobalBank</span>
+        <span>Netresche</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Innovative Features of Cryptic</h2>
+      <div class="feature-grid">
+        <!-- Dynamic Market Trends -->
+        <div class="feature-card">
+          <h3>Dynamic Market Trends</h3>
+          <canvas id="marketChart"></canvas>
+        </div>
+        <!-- Fortified Security -->
+        <div class="feature-card">
+          <h3>Fortified Security</h3>
+          <p>Advanced AI and multi-layer authentication ensure unbeatable protection.</p>
+        </div>
+        <!-- Decentralized Connectivity -->
+        <div class="feature-card">
+          <h3>Decentralized Connectivity</h3>
+          <p>Peer-to-peer networks, low latency, and ultra-fast operations.</p>
+        </div>
+        <!-- Payment Gateway -->
+        <div class="feature-card">
+          <h3>Payment Gateway</h3>
+          <p>Accept and send crypto transactions instantly with VISA integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Pricing Made Simple</h2>
+      <div class="pricing-cards">
+        <div class="card">
+          <h3>Basic Plan</h3>
+          <p class="price">$10 <span>/month</span></p>
+          <ul>
+            <li>Unlimited tracking</li>
+            <li>Basic insights</li>
+            <li>Email support</li>
+          </ul>
+          <button class="cta">Get Started</button>
+        </div>
+        <div class="card">
+          <h3>Pro Plan</h3>
+          <p class="price">$25 <span>/month</span></p>
+          <ul>
+            <li>Advanced analytics</li>
+            <li>Live data</li>
+            <li>Premium support</li>
+          </ul>
+          <button class="cta">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="left">
+          <h3>Cryptic</h3>
+          <p>Secure blockchain solutions made simple.</p>
+        </div>
+        <div class="right">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+      <p class="copyright">© 2025 Cryptic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const ctx = document.getElementById('marketChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+        datasets: [{
+          label: 'Growth',
+          data: [12, 19, 3, 5, 2],
+          borderColor: '#facc15',
+          tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: { x: { display: false }, y: { display: false } }
+      }
+    });
+  </script>
+</body>
+</html>
